@@ -1,0 +1,23 @@
+let user =prompt("enter gun,water or snake")
+let cpu1 =Math.floor(Math.random()*3)
+let cpu =["snake","gun","water"][cpu1]
+
+const match =(user,cpu)=>{
+  if(user === cpu){
+    console.log("match is tie no one is winner")
+  }else if (user === "gun" && cpu ==="water"){
+    return "cpu"
+  }else if(user ==="water" && cpu ==="gun"){
+    return "user"
+  }else if(user ==="snake" && cpu ==="gun"){
+    return "cpu"
+  }else if(user ==="gun" && cpu ==="snake"){
+    return "user"
+  }else if(user ==="snake" && cpu ==="water"){
+    return "user"
+  }else if (user ==="water" && cpu === "snake"){
+  return "cpu"}
+
+}
+let result = match(cpu,user)
+console.log ("result: "+result)
